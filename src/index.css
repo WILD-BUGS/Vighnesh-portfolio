@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sky-blue: #A9D6F5;
+    --cloud-white: #FFF9F5;
+    --sakura-pink: #F7B2C4;
+    --deep-pink: #E87898;
+    --petal-pink: #FFD9E4;
+    --lavender: #DCD6F7;
+    --ink: #303442;
+    --soft-text: #687080;
+    --sky-accent: #7FB8E8;
+    --leaf-green: #A8C69F;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-script {
+  font-family: 'Kalam', cursive;
+}
+
+.font-japanese {
+  font-family: 'Zen Maru Gothic', -apple-system, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Anime Glassmorphism and Card Aesthetics */
+.sakura-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(247, 178, 196, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(232, 120, 152, 0.12), 0 2px 8px -2px rgba(48, 52, 66, 0.04);
+}
+
+.sakura-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sakura-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(232, 120, 152, 0.22), 0 4px 12px -2px rgba(48, 52, 66, 0.08);
+  border-color: rgba(232, 120, 152, 0.5);
+}
+
+.sakura-badge {
+  background: linear-gradient(135deg, #FFF0F4 0%, #FFD9E4 100%);
+  border: 1px solid #F7B2C4;
+  color: #E87898;
+}
+
+/* Shimmer animation */
+@keyframes sakura-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: sakura-shimmer 2.5s infinite;
+}
+
+/* Gentle float animation */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: gentle-float 4.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+.animate-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar for anime feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #F7B2C4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E87898;
+}
